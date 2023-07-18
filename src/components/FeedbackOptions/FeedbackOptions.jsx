@@ -18,6 +18,9 @@ function FeedbackOptions({ options, onValueBtnClick }) {
     )
 }
 
-FeedbackOptions.propTypes = {}
+FeedbackOptions.propTypes = {
+    option: PropTypes.arrayOf(PropTypes.string),
+    onValueBtnClick: PropTypes.func.isRequired,
+}
 
 export default FeedbackOptions
