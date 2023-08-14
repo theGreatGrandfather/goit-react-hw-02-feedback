@@ -1,6 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import {Paragraph} from './Statistics.styled'
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import {Paragraph} from './Statistics.styled';
 
 function Statistics({good, neutral, bad, total, positivePercentage}) {
     const data = [

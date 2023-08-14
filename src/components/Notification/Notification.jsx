@@ -1,6 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import {Paragraph} from './Notification.styled'
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import {Paragraph} from './Notification.styled';
 
 function Notification({message}) {
     return (

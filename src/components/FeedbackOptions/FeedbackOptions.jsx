@@ -1,8 +1,9 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import {FeedBackContainer, FeedBackBtn} from './FeedbackOptions.styled'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-function FeedbackOptions({ options, onValueBtnClick }) {
+import { FeedBackContainer, FeedBackBtn } from './FeedbackOptions.styled';
+
+function FeedbackOptions({ options, onLeaveFeedback }) {
     return (
         <FeedBackContainer>
             {options.map(option =>
@@ -10,7 +11,7 @@ function FeedbackOptions({ options, onValueBtnClick }) {
                     key={option}
                     name={option}
                     type="button"
-                    onClick={onValueBtnClick}
+                    onClick={onLeaveFeedback}
                 >
                     {option}
                 </FeedBackBtn>)}
@@ -19,7 +20,7 @@ function FeedbackOptions({ options, onValueBtnClick }) {
 }
 
 FeedbackOptions.propTypes = {
-    option: PropTypes.arrayOf(PropTypes.string),
+    option: PropTypes.arrayOf(PropTypes.string.isRequired),
     onValueBtnClick: PropTypes.func.isRequired,
 }
 

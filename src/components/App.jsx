@@ -1,8 +1,9 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+
 import Section from "./Section/Section";
 import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 import Statistics from './Statistics/Statistics';
-import Notification from './Notification/Notification'
+import Notification from './Notification/Notification';
 
 export class App extends Component{
 
@@ -12,7 +13,7 @@ export class App extends Component{
     bad: 0
   }
 
-  onValueBtnClick = (e) => {
+  onLeaveFeedback = (e) => {
     e.preventDefault();
     this.setState(prevState =>
       ({ [e.target.name]: prevState[e.target.name] + 1 })
@@ -42,7 +43,7 @@ export class App extends Component{
         >
           <FeedbackOptions
             options={Object.keys(this.state)}
-            onValueBtnClick={this.onValueBtnClick}
+            onLeaveFeedback={this.onLeaveFeedback}
           />
         </Section>
 
