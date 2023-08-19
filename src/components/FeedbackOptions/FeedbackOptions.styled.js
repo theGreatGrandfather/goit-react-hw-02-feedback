@@ -8,5 +8,6 @@ gap: 32px;
 
 export const FeedBackBtn = styled.button`
 padding: 8px 18px;
-background-color: blue;
+background-color: lightblue;
+cursor: pointer;
 `
